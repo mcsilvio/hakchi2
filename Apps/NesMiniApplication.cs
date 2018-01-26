@@ -168,11 +168,13 @@ namespace com.clusterrr.hakchi_gui
                 {
                     default:
                     case MainForm.ConsoleType.NES:
+                        return System.IO.Path.Combine(Program.BaseDirectoryExternal, "games_nes");
                     case MainForm.ConsoleType.Famicom:
-                        return System.IO.Path.Combine(Program.BaseDirectoryExternal, "games");
+                        return System.IO.Path.Combine(Program.BaseDirectoryExternal, "games_famicom");
                     case MainForm.ConsoleType.SNES:
-                    case MainForm.ConsoleType.SuperFamicom:
                         return System.IO.Path.Combine(Program.BaseDirectoryExternal, "games_snes");
+                    case MainForm.ConsoleType.SuperFamicom:
+                        return System.IO.Path.Combine(Program.BaseDirectoryExternal, "games_super_famicom");
                 }
             }
         }
